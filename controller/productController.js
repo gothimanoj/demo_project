@@ -23,7 +23,6 @@ module.exports = {
     getProducts: async (req, res) => {
         try {
             const products = await productModel.find()
-
             res.status(200).json({
                 status: true,
                 data: products,
@@ -37,7 +36,7 @@ module.exports = {
         }
     },
     getProductById: async (req, res) => {
-        console.log("hello");
+
         try {
             const id = req.params.id
 
